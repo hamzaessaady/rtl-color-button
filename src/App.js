@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { COLORS } from "./App.constants";
 import "./App.css";
 
 function App() {
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState(COLORS.initial);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const newColor = color === "red" ? "blue" : "red";
-
+  const newColor = color === COLORS.initial ? COLORS.alternate : COLORS.initial;
   return (
     <main>
       <button
-        style={{ backgroundColor: isButtonDisabled ? "gray" : color }}
+        style={{ backgroundColor: isButtonDisabled ? COLORS.disabled : color }}
         onClick={() => setColor(newColor)}
         disabled={isButtonDisabled}
       >
