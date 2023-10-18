@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { COLORS } from "./App.constants";
+import { formatColorName } from "./App.services";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         onClick={() => setColor(newColor)}
         disabled={isButtonDisabled}
       >
-        Change to {newColor}
+        Change to {formatColorName(newColor)}
       </button>
 
       <label htmlFor="disable-color-button">Disable color button</label>

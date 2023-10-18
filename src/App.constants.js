@@ -1,5 +1,5 @@
 export const COLORS = {
-  initial: "red",
-  alternate: "blue",
+  initial: "mediumVioletRed",
+  alternate: "midnightBlue",
   disabled: "gray",
 };
